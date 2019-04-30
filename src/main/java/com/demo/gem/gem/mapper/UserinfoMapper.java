@@ -1,6 +1,7 @@
 package com.demo.gem.gem.mapper;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.demo.gem.gem.entity.Userinfo;
 
 

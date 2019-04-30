@@ -1,6 +1,7 @@
 package com.demo.gem.gem;
 
-import com.baomidou.mybatisplus.plugins.PerformanceInterceptor;
+
+import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

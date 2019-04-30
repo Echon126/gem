@@ -1,7 +1,8 @@
 package com.demo.gem.gem.service.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.demo.gem.gem.entity.Userinfo;
 import com.demo.gem.gem.mapper.UserinfoMapper;
 import com.demo.gem.gem.service.IUserinfoService;

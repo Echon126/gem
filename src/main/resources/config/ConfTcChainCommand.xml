@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bzcoder.test.mapper.ConfTcChainCommandMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.bzcoder.test.entity.ConfTcChainCommand">
+        <id column="id" property="id" />
+        <result column="chain_id" property="chainId" />
+        <result column="command_obj_id" property="commandObjId" />
+        <result column="command_obj_type_id" property="commandObjTypeId" />
+        <result column="command_obj_index" property="commandObjIndex" />
+        <result column="is_judgment" property="isJudgment" />
+        <result column="is_pause" property="isPause" />
+        <result column="next_interval" property="nextInterval" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, chain_id, command_obj_id, command_obj_type_id, command_obj_index, is_judgment, is_pause, next_interval, update_time
+    </sql>
+
+</mapper>

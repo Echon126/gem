@@ -1,16 +1,12 @@
 package com.demo.gem.gem.controller;
 
-
-import com.baomidou.mybatisplus.mapper.EntityWrapper;
-import com.baomidou.mybatisplus.mapper.Wrapper;
+import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.demo.gem.gem.entity.Userinfo;
 import com.demo.gem.gem.service.impl.UserinfoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +21,7 @@ import java.util.Map;
  */
 @RestController
 public class UserinfoController {
-    @Autowired
+ /*   @Autowired
     UserinfoServiceImpl userinfoService;
     @RequestMapping("/test/userinfo")
     public void insert() {
@@ -51,6 +47,6 @@ public class UserinfoController {
         Map<String,Object> map = new HashMap<>();
         map.put("name","s");
        this.userinfoService.deleteByMap(map);
-    }
+    }*/
 }
 
