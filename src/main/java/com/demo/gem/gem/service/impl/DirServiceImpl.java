@@ -1,7 +1,8 @@
 package com.demo.gem.gem.service.impl;
 
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.demo.gem.gem.entity.Dir;
 import com.demo.gem.gem.mapper.DirMapper;
 import com.demo.gem.gem.service.IDirService;
