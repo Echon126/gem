@@ -26,8 +26,7 @@ public class FileConfiguration {
     private String content;
 
     @PostConstruct
-    public void init() throws IOException {
-        StringBuilder sb = new StringBuilder();
+    public void init()   {
         System.out.println("-----------开始初始化配置文件-----------------");
 /*
 
@@ -45,21 +44,43 @@ public class FileConfiguration {
         System.out.println("---------------111111111111111111111-------------"+content);
 */
 
-        //获取容器资源解析器
+        //获取容器资源解析器 TODO https://blog.csdn.net/huyande123/article/details/81284941
         ResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = resolver.getResources("model/*.*");
-        for (Resource r : resources) {
-            System.out.println("-------------加载所有文件---------------" + r.getFilename());
-            byte[] bytes = new byte[1024];
-            InputStream in = r.getInputStream();
-            ByteArrayOutputStream baos = new ByteArrayOutputStream();
-            byte[] buffer = new byte[1024];
-            int len=-1;
-            while((len=in.read(buffer))!=-1){
-                baos.write(buffer,0,len);
+        Resource[] resources;
+        InputStream in = null;
+        ByteArrayOutputStream baos = null;
+        try {
+            resources = resolver.getResources("model/*.*");
+            for (Resource r : resources) {
+                System.out.println("-------------加载所有文件---------------" + r.getFilename());
+                in = r.getInputStream();
+                baos = new ByteArrayOutputStream();
+                byte[] buffer = new byte[1024];
+                int len = -1;
+                while ((len = in.read(buffer)) != -1) {
+                    baos.write(buffer, 0, len);
+                }
+                System.out.println("-----------文件流数据内容字符串------------------" + baos.toString());
             }
-            System.out.println("-----------文件流数据内容字符串------------------" + baos.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (baos != null) {
+                try {
+                    baos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
         }
+
 
 
 
