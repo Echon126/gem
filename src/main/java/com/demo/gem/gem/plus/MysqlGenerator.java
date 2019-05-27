@@ -1,5 +1,6 @@
 package com.demo.gem.gem.plus;
 
+
 import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.generator.AutoGenerator;
@@ -7,6 +8,7 @@ import com.baomidou.mybatisplus.generator.InjectionConfig;
 import com.baomidou.mybatisplus.generator.config.*;
 import com.baomidou.mybatisplus.generator.config.po.TableFill;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
+
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
 
@@ -38,9 +40,9 @@ public class MysqlGenerator {
                 new DataSourceConfig()
                         .setDbType(DbType.MYSQL)// 数据库类型
                         .setDriverName("com.mysql.cj.jdbc.Driver")
-                        .setUsername("wmcc_dev")
-                        .setPassword("HcH5S7qN")
-                        .setUrl("jdbc:mysql://192.168.160.230:3306/wmcc?useUnicode=true&useSSL=false&characterEncoding=utf8")
+                        .setUsername("root")
+                        .setPassword("root")
+                        .setUrl("jdbc:mysql://localhost:3306/springboot?serverTimezone=UTC&characterEncoding=utf-8&useSSL=true&createDatabaseIfNotExist=true")
         ).setStrategy(
                 // 策略配置
                 new StrategyConfig()
@@ -48,7 +50,7 @@ public class MysqlGenerator {
                         .setNaming(NamingStrategy.underline_to_camel)// 表名生成策略
                         .setSuperEntityColumns(new String[]{"test_id"})
                         .setTableFillList(tableFillList)
-                        .setInclude(new String[]{"conf_tc_chain","conf_tc_chain_command"}) // 需要生成的表
+                       // .setInclude(new String[]{"user"}) // 需要生成的表
         ).setPackageInfo(
                 // 包配置
                 new PackageConfig()

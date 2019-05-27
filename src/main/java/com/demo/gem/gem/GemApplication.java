@@ -1,6 +1,5 @@
 package com.demo.gem.gem;
 
-
 import com.baomidou.mybatisplus.extension.plugins.PerformanceInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -19,4 +18,7 @@ public class GemApplication {
 	public PerformanceInterceptor performanceInterceptor() {
 		return new PerformanceInterceptor();
 	}
+
+
+	//TODO https://blog.csdn.net/m0_37034294/article/details/82917234
 }
